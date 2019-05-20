@@ -33,7 +33,7 @@ class ArticleTest(unittest.TestCase):
         """
         Set up method that will run before every Test
         """
-        self.new_article = Article("bloomberg","TestTitle","TestDescription","TestUrl","TestUrlToImage","TestPublishedAt","TestContent")
+        self.new_news = News("bloomberg","TestTitle","TestDescription","TestUrl","TestUrlToImage","TestPublishedAt","TestContent")
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_article,Article))

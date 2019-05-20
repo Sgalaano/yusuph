@@ -1,5 +1,5 @@
 import urllib.request,json
-from .models import Source,Article
+from .models import Source,news
 
 #Getting apiKey
 
@@ -85,7 +85,7 @@ def process_news(news_list):
         content = news_item.get('content')
 
         if urlToImage:
-            news_object = Article(id,title,description,url,urlToImage,publishedAt,content)
-            news_results.append(article_object)
+            news_object = News(id,title,description,url,urlToImage,publishedAt,content)
+            news_results.append(news_object)
 
-    return article_results
+    return news_results
