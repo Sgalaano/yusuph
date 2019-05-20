@@ -14,13 +14,15 @@ def configure_request(app):
     api_key = app.config["NEWS_API_KEY"]
     base_url = app.config["NEWS_API_BASE_URL"]
     article_base_url = app.config["ARTICLE_API_BASE_URL"]
-
+    print(article_base_url,base_url,api_key)
 def get_sources(source):
     """
     Function that gets the json response to our url request
     """
     get_sources_url = base_url.format(source,api_key)
-
+    print(get_sources_url)
+    print(get_sources_url)
+    print(get_sources_url)
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
@@ -59,11 +61,11 @@ def process_results(source_list):
 
 def get_news(id):
     '''Function thet gets the json response to our url request'''
-    get_news_url = news_base_url.format(id,api_key)
+    get_news_url = base_url.format(id,api_key)
 
     with urllib.request.urlopen(get_news_url) as url:
-        get_articles_data = url.read()
-        get_articles_response = json.loads(get_news_data)
+        get_news_data = url.read()
+        get_news_response = json.loads(get_news_data)
 
         news_results = None
 
@@ -85,7 +87,7 @@ def process_news(news_list):
         content = news_item.get('content')
 
         if urlToImage:
-            news_object = News(id,title,description,url,urlToImage,publishedAt,content)
+            news_object = news(id,title,description,url,urlToImage,publishedAt,content)
             news_results.append(news_object)
 
     return news_results
