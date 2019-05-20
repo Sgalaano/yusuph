@@ -9,9 +9,9 @@ class Source:
         self.url= url
         self.category = category
 
-class Article:
+class news:
     """
-    Article class to define Source Articles
+    news class to define Source News
     """
     def __init__(self,id,title,description,url,urlToImage,publishedAt,content):
         self.id = id

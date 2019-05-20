@@ -1,5 +1,5 @@
-mport unittest
-from app.models import Source,Article
+import unittest
+from app.models import Source,news
 
 class SourceTest(unittest.TestCase):
     """
