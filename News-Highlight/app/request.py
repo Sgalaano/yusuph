@@ -57,35 +57,35 @@ def process_results(source_list):
 
     return source_results
 
-def get_articles(id):
+def get_news(id):
     '''Function thet gets the json response to our url request'''
-    get_articles_url = article_base_url.format(id,api_key)
+    get_news_url = news_base_url.format(id,api_key)
 
-    with urllib.request.urlopen(get_articles_url) as url:
+    with urllib.request.urlopen(get_news_url) as url:
         get_articles_data = url.read()
-        get_articles_response = json.loads(get_articles_data)
+        get_articles_response = json.loads(get_news_data)
 
-        article_results = None
+        news_results = None
 
-        if get_articles_response['articles']:
-            article_results_list = get_articles_response['articles']
-            article_results = process_articles(article_results_list)
+        if get_news_response['news']:
+            news_results_list = get_news_response['news']
+            news_results = process_news(news_results_list)
 
-    return article_results
+    return news_results
 
-def process_articles(article_list):
-    article_results = []
-    for article_item in article_list:
-        id = article_item.get('id')
-        title = article_item.get('title')
-        description = article_item.get('description')
-        url = article_item.get('url')
-        urlToImage = article_item.get('urlToImage')
-        publishedAt = article_item.get('publishedAt')
-        content = article_item.get('content')
+def process_news(news_list):
+    news_results = []
+    for news_item in news_list:
+        id = news_item.get('id')
+        title = news_item.get('title')
+        description = news_item.get('description')
+        url = news_item.get('url')
+        urlToImage = news_item.get('urlToImage')
+        publishedAt = news_item.get('publishedAt')
+        content = news_item.get('content')
 
         if urlToImage:
-            article_object = Article(id,title,description,url,urlToImage,publishedAt,content)
-            article_results.append(article_object)
+            news_object = Article(id,title,description,url,urlToImage,publishedAt,content)
+            news_results.append(article_object)
 
     return article_results
