@@ -1,0 +1,1 @@
+/home/galaano/Documents/Watchlist/app/instance/config.py

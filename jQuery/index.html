@@ -1,0 +1,79 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/jquery.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/jquery.js"></script>
+</head>
+<title>QUIZ BOARD</title>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <div class="panel panel-info">
+        <h1>QUIZ BOARD</h1>
+      </div>
+      <br>
+
+
+      <div class="well">
+        <form id="Quiz" action="index.html" method="POST" name="Quiz">
+          <p><strong> 1. What is the shortform of html? </strong></p>
+          <br>
+          <input type="radio" name="q1" id="mc" value="correct">html<br>
+          <input type="radio" name="q1" id="mc" value="wrong">hmhlt<br>
+          <input type="radio" name="q1" id="mc" value="wrong">mlht<br>
+      </div>
+      <div class="well">
+        <p><strong> 2. what is the orher name of javascript?</strong></p>
+        <br>
+        <input type="radio" name="q2" id="mc" value="wrong">ECMAscript()<br>
+        <input type="radio" name="q2" id="mc" value="wrong">js()<br>
+        <input type="radio" name="q2" id="mc" value="correct">i don't know()<br>
+      </div>
+      <div class="well">
+        <p><strong> 3. is c++ a low level language?</strong></p>
+        <br>
+        <input type="radio" name="q3" id="mc" value="correct">yes()<br>
+        <input type="radio" name="q3" id="mc" value="wrong">no()<br>
+        <input type="radio" name="q3" id="mc" value="wrong">no Answer()<br>
+      </div>
+      <div class="well">
+
+        <p><strong> 4. Which of the following function of string object?</strong></p>
+        <br>
+        <input type="radio" name="q4" id="mc" value="wrong">merge()<br>
+        <input type="radio" name="q4" id="mc" value="correct">concat()<br>
+        <input type="radio" name="q4" id="mc" value="wrong">add()<br>
+      </div>
+
+      <div class="well">
+        <p><strong> 5. which of the following functions below?</strong></p>
+        <br>
+        <input type="radio" name="q5" id="mc" value="wrong">replace()<br>
+        <input type="radio" name="q5" id="mc" value="wrong">match()<br>
+        <input type="radio" name="q5" id="mc" value="correct">search()<br>
+      </div>
+    </div>
+    <h2><em>good lucky!!!!!</em></h2>
+
+    <input type="button" name="results" value="SUBMIT" id="button" class="btn-danger" onClick="check();">
+  </div>
+  </form>
+  <div class="footer">
+    <p> infos:hyacinthen04@gmail.com</p>
+    <p>copyright@2018</p>
+  </div>
+
+  </div>
+
+  <div id="fifth-p">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFHu47DfYukfKHtMUB_-gSbmmigDFoXotpbuaT5Kt4bJA3255WKQ">
+
+    <p id="correctNumber">YOUR SCORE IS:</p>
+  </div>
+
+</body>
+<html>
